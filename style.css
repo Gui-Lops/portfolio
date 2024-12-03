@@ -195,7 +195,8 @@ header .navbar .nav-itens a:hover:before {
 
 .projetos{
     position: relative;
-    height: 100vh;
+    min-height: 100vh; /* Altura mínima para manter o design */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
     z-index: 0;
     display: flex;
     align-items: center;
@@ -490,4 +491,152 @@ footer {
     bottom: 0;
     width: 100%;
     border-top: 0.5vh solid var(--second-bg-color);
+}
+
+/*  RESPONSIVIDADE */
+
+/* Media query para telas menores que 936px */
+@media screen and (max-width: 936px) {
+    header {
+        padding: 15px; /* Ajuste de padding para telas pequenas */
+    }
+
+    header .navbar .nav-itens {
+        display: flex;
+        gap: 15px; /* Ajuste o espaçamento entre os itens */
+        align-items: center; /* Alinha os itens ao centro */
+        width: 100%; /* Garante que a navbar ocupe toda a largura */
+    }
+
+    header .navbar .nav-itens a {
+        font-size: 1.2rem; /* Ajusta o tamanho da fonte para ser mais legível */
+        margin-left: 0; /* Remove a margem lateral */
+    }
+
+    /* Para a .brand, garanta que ela ainda fique visível e centralizada */
+    header .brand {
+        font-size: 1.8rem; /* Ajuste de fonte */
+        text-align: center;
+        width: 100%; /* Garante que ocupe a largura completa */
+        margin-bottom: 1rem; /* Espaço abaixo da brand */
+    }
+}
+
+/* Ponto de quebra para tablets (768px ou menos) */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px 50px;
+        flex-direction: column;
+    }
+
+    header .navbar .nav-itens a {
+        margin-left: 10px;
+        font-size: 0.9rem;
+    }
+
+    .home {
+        padding: 10%;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .home-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-img img {
+        width: 40vw;
+    }
+
+    .social-icons a {
+        font-size: 1.5rem;
+        margin: 2rem 0.3rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+    }
+
+    .projetos-content .titulo {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+        padding: 1.5rem;
+    }
+}
+
+/* Ponto de quebra para smartphones (480px ou menos) */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    header .brand {
+        font-size: 1.2rem;
+    }
+
+    header .navbar .nav-itens a {
+        font-size: 0.8rem;
+        margin-left: 5px;
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+
+    .home-img img {
+        width: 60vw;
+    }
+
+    .btn {
+        padding: 0.5rem 2rem;
+        font-size: 1rem;
+    }
+
+    .projetos-content {
+        gap: 1rem;
+    }
+
+    .card {
+        width: 95%;
+        height: auto;
+    }
+
+    .skills .skills-row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .skills .skills-column {
+        flex: 1 1 auto;
+    }
+
+    .contato {
+        padding: 2rem;
+    }
+
+    .contato .formulario {
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    footer {
+        font-size: 12px;
+    }
 }
