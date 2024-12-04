@@ -11,6 +11,19 @@
     scroll-behavior: smooth;
 }
 
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--second-color);
+    border-radius: 50px;
+}
+
 :root {
     --bg-color: #1c1c1c;
     --second-bg-color: #101010;
@@ -90,7 +103,8 @@ header .navbar .nav-itens a:hover:before {
 }
 
 .home {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     padding: 12%;
     display: flex;
     align-items: center;
@@ -239,7 +253,8 @@ header .navbar .nav-itens a:hover:before {
     margin: 0 auto;
     padding: 2rem;
     width: 60vh;
-    height: 40vh;
+    min-height: 40vh;
+    height: auto;
     background-color: #171717;
     border-radius: 10px;
 }
@@ -316,6 +331,8 @@ header .navbar .nav-itens a:hover:before {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     background: var(--second-color);
 }
+
+/* Adicionando detalhes na seção de contatos */
 
 .skills {
     min-height: auto;
@@ -435,6 +452,8 @@ span {
     color: var(--second-color);
 }
 
+/* Adicionando detalhes na seção de contatos */
+
 .contato {
     position: relative;
     height: 100vh;
@@ -481,6 +500,8 @@ span {
     background-color: var(--second-color);
     transform: translateY(-2px);
 }
+
+/* Adicionando detalhes no footer */
 
 footer {
     text-align: center;
@@ -546,7 +567,7 @@ footer {
     }
 
     .home-content h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .home-img img {
